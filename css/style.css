@@ -27,6 +27,7 @@ body{
 img{
     max-width: 100%;
     display: block;
+    height: auto;
 }
 
 p, ul, li{
@@ -57,7 +58,7 @@ header a:hover{
     width: 100%;
     top: 0;
     display: flex;
-    transition: top 0.6s;
+    transition: top 1.5s;
     max-width: 1100px;
     padding: 25px;
     margin: auto;
@@ -65,13 +66,12 @@ header a:hover{
     text-transform: uppercase;
     align-items: center;
     position: fixed;
-    width: 100%;
     background-color: #f5f5f5;
 }
 
 .testata{
     margin: auto;
-    width: 1100px;
+    max-width: 1100px;
 }
 
 .login{
@@ -90,8 +90,8 @@ header nav ul{
 
 .section-hero{
     margin: auto;
-    padding: 60px 350px 0 350px;
-    font-size: 15px;
+    padding-top: 60px;
+    font-size: 1rem;
     font-style: italic;
     text-align: center;
 }
@@ -100,7 +100,7 @@ h1{
     color: var(--text-color);
     font-size: 64px;
     font-style: italic;
-    padding: 120px 0 60px;
+    padding: 60px 0;
     font-weight: 950;
 }
 
@@ -120,7 +120,7 @@ p{
     color: #f5f5f5;
     font-size: 14px;
     text-align: center;
-    padding: 32px 180px 0 180px;
+    padding: 32px 0;
 }
 
 .flex{
@@ -164,7 +164,7 @@ h2{
 
 .container{
     position: absolute;
-    width: auto;
+    max-width: auto;
     top: 70%;
     left: 53%;
     transform: translate(-60%, -55%);
@@ -175,7 +175,7 @@ h2{
     justify-content: space-between;
     text-transform: uppercase;
     align-items: center;
-    width: 100%;
+    max-width: 100%;
     font-size: 12px;
 }
 
@@ -194,4 +194,56 @@ h2{
 .footnav a:hover{
     text-decoration: underline;
     color: var(--text-color);
+}
+
+@media (max-width: 600px){
+
+    #navigation{
+        flex-direction: column;
+    }
+
+    .home{
+        font-size: 2rem;
+        padding-bottom: 32px;
+    }
+
+    #navigation ul{
+        align-items: center;
+        gap: 4px;
+    }
+
+    header a{
+        font-size: 0.6rem;
+    }
+
+    .testata{
+        margin-top: 80px;
+    }
+
+    section{
+        padding: 0 20px;
+        background-color: aquamarine;
+    }
+
+    .flex{
+        flex-direction: column;
+    }
+
+    .bg-img{
+        min-height: 280px;
+        margin: auto;
+    }
+
+    h2{
+        font-size: 5rem;
+    }
+
+    .container{
+        top: 70%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+    .footnav a{
+        font-size: 0.6rem;
+    }
 }
